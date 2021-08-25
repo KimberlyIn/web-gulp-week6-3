@@ -36,6 +36,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
+$ruby:    #E31277;
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -46,6 +47,7 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+$black:   #000000 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -62,14 +64,15 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "black":      $black,
 ) !default;
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       #00cc99; // $blue !default;
+$primary:       $blue !default; // $black !default; // $blue !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
+$success:       #198754 !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -86,7 +89,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "ruby":       $ruby,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -253,8 +257,8 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  4: $spacer * 1.5, 
+  5: $spacer * 2,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -286,9 +290,9 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color:                        $success !default; // shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -918,13 +922,14 @@ $zindex-tooltip:                    1080 !default;
 
 // scss-docs-start nav-variables
 $nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-x:                0.3rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
 $nav-link-color:                    $link-color !default;
 $nav-link-hover-color:              $link-hover-color !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
+
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
@@ -1317,9 +1322,9 @@ $list-group-item-bg-scale:          -80% !default;
 $list-group-item-color-scale:       40% !default;
 
 $list-group-hover-bg:               $gray-100 !default;
-$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg:              $component-active-bg !default;
-$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-active-color:           $gray-900  !default; // $component-active-color !default;
+$list-group-active-bg:              $gray-100 !default; // $component-active-bg !default;
+$list-group-active-border-color:    rgba($black, .125) !default; // $list-group-active-bg !default;
 
 $list-group-disabled-color:         $gray-600 !default;
 $list-group-disabled-bg:            $list-group-bg !default;
