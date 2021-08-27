@@ -1,11 +1,11 @@
 .product-sm {
-  display: none !important;
+  display: none;
   @include media-breakpoint-down(sm) {
     display: block;
   }
 }
 .product-lg {
   @include media-breakpoint-down(sm) {
-    display: none !important;
+    display: none;
   }
 }
