@@ -12984,10 +12984,6 @@ main .live .row {
   }
 }
 
-.product-lg {
-  display: block;
-}
-
 @media (max-width: 575.98px) {
   .product-lg {
     display: none !important;
