@@ -12974,23 +12974,24 @@ main .live .row {
   background-repeat: no-repeat;
 }
 
-main header {
-  height: 480px;
-  background-image: url(../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash-1.jpg);
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
+.product-sm {
+  display: none;
 }
 
-main .nav a {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+@media (max-width: 575.98px) {
+  .product-sm {
+    display: block;
+  }
 }
 
-main .nav a:hover {
-  color: #E31277;
-  border-bottom: 2px solid #E31277;
+.product-lg {
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .product-lg {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
