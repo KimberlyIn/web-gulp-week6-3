@@ -12975,7 +12975,7 @@ main .live .row {
 }
 
 .product-sm {
-  display: none !important;
+  display: none;
 }
 
 @media (max-width: 575.98px) {
@@ -12986,7 +12986,7 @@ main .live .row {
 
 @media (max-width: 575.98px) {
   .product-lg {
-    display: none !important;
+    display: none;
   }
 }
 
