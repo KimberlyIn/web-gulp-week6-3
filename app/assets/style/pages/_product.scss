@@ -1,5 +1,5 @@
 .product-sm {
-  display: none;
+  display: none !important;
   @include media-breakpoint-down(sm) {
     display: block;
   }
@@ -7,6 +7,6 @@
 .product-lg {
   display: block;
   @include media-breakpoint-down(sm) {
-    display: none;
+    display: none !important;
   }
 }
