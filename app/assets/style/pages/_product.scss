@@ -1,18 +1,12 @@
-main {
-  header {
-    height: 480px;
-    background-image: url(../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash-1.jpg); 
-    background-size: cover; 
-    background-position: 50%;
-    background-repeat: no-repeat;
+.product-sm {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
   }
-  .nav {
-    a {
-      transition: all 0.2s;
-      &:hover {
-        color: $ruby;
-        border-bottom: 2px solid $ruby;
-      }
-    }
+}
+.product-lg {
+  display: block;
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }
