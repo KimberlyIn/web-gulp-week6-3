@@ -1,0 +1,58 @@
+main {
+  header {
+    height: 480px;
+    background-image: url(../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash-1.jpg); 
+    @include b-image;
+    .btn-outline-dark {
+      border-color: $white;
+    }
+  }
+  .nav {
+    a {
+      transition: all 0.2s;
+      &:hover {
+        color: $ruby;
+        border-bottom: 2px solid $ruby;
+      }
+    }
+    ul {
+      @include media-breakpoint-down(sm) {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+    }
+  }
+  .hot-exhibitions {
+    .card {
+      border: none;
+      .btn-outline-dark {
+        border-color: $tyrian-purple;
+        &:hover {
+          // color: $white;
+          background-color: #b6106033;
+        }
+      }
+    } 
+    .card-sm {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+    .card-lg {
+      @include media-breakpoint-down(sm) {
+        display: none !important;
+      }
+    }
+  }
+  .live {
+    .row {
+      background-image: url(../images/people2.png); 
+      @include b-image;
+    }
+  }
+  
+}

@@ -1,0 +1,57 @@
+header {
+  nav {
+    .container {
+      @include media-breakpoint-down(lg) {
+        flex-direction: row-reverse;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+.also-like {
+  #carouselExampleInterval {
+    display: block;
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+  }
+  #carouselExampleInterval-2 {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}
+.cartNumber {
+  top: 0;
+  right: 5px;
+}
+.position-lg-absolute{
+  position: absolute;
+}
+.translate-lg-middle{
+  transform: translate(-50%,-50%);
+}
+.news {
+  height: 400px;
+  background-image: url(../images/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg); 
+  @include b-image;
+}
+.imgHeight {
+  img {
+    height: 350px;
+
+  }
+}
+.imgWidth {
+  img {
+    width: 100%;
+  }
+}
+.footer {
+  button {
+    @include media-breakpoint-down(sm) {
+      display:none;
+    }
+  }
+}

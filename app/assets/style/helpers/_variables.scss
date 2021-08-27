@@ -36,6 +36,9 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
+$melanzane: #190014CC;
+$tyrian-purple: #630834;
+$gray-light: #EFEFEF;
 $ruby:    #E31277;
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
@@ -82,6 +85,10 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "melanzane": $melanzane,
+  "tyrian-purple": $tyrian-purple,
+  "gray-light": $gray-light,
+  "ruby":       $ruby,
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
@@ -90,7 +97,6 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "ruby":       $ruby,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -259,6 +265,8 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5, 
   5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 5,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -271,6 +279,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  40: 40%,
   50: 50%,
   100: 100%
 ) !default;
@@ -420,7 +429,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:  'Roboto', 'Noto Sans TC', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;

@@ -6,4 +6,13 @@ main {
     background-position: 50%;
     background-repeat: no-repeat;
   }
+  .nav {
+    a {
+      transition: all 0.2s;
+      &:hover {
+        color: $ruby;
+        border-bottom: 2px solid $ruby;
+      }
+    }
+  }
 }
